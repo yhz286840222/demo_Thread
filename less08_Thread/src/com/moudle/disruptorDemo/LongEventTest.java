@@ -29,7 +29,8 @@ public class LongEventTest {
 		
 		dis.start();
 		RingBuffer<LongEvent> ringBuffer=dis.getRingBuffer();
-		LongEventProducer producer=new LongEventProducer(ringBuffer);
+		//LongEventProducer producer=new LongEventProducer(ringBuffer);
+		LongEventProducerWithTranslator producer = new LongEventProducerWithTranslator(ringBuffer);
 		ByteBuffer bb=ByteBuffer.allocate(8);
 		for (int i = 0; i < 100; i++) {
 			bb.putLong(0,i);
