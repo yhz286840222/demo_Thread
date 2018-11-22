@@ -1,6 +1,5 @@
 package com.moudle.concurrentUtil;
 
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -31,7 +30,6 @@ public class UseSemaphore {
 						//访问完毕，释放
 						semaphore.release();
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}

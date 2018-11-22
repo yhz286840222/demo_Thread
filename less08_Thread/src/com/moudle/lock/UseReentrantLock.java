@@ -2,7 +2,11 @@ package com.moudle.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
+/**
+ * 重入锁
+ * @author yanghz
+ * @createDate 2018年11月19日
+ */
 public class UseReentrantLock {
 	
 	private Lock lock=new ReentrantLock();
