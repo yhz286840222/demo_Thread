@@ -25,13 +25,16 @@ public class Main {
 				return new Trade();
 			}
 		}, bufferSize, executor, ProducerType.SINGLE, new BusySpinWaitStrategy());
+		
 		//菱形操作
 		//使用disruptor创建消费者组C1,C2  
 		EventHandlerGroup<Trade> handlerGroup=disruptor.handleEventsWith(new Handler1(),new Handler2());
 		//声明在C1,C2完事之后执行JMS消息发送操作 也就是流程走到C3 
 		handlerGroup.then(new Handler3());
 		//輸出結果：
-		
+//		handler1 set name:
+//		handler2 set price:
+//		handler3: name: h1 , price: 17.0;  instance: com.moudle.disruptorDemo.generate1.Trade@220a5c4d
 		
 		/*//六边形操作
 		Handler1 h1 = new Handler1();
