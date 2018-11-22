@@ -17,5 +17,4 @@ public class Handler1 implements EventHandler<Trade>,WorkHandler<Trade>{
 	public void onEvent(Trade arg0, long arg1, boolean arg2) throws Exception {
 		this.onEvent(arg0);
 	}
-
 }
